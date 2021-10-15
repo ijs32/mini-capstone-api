@@ -1,0 +1,24 @@
+POST http://localhost:3000/products.json
+Content-Type: application/json
+
+{
+  "name": "electric scooter", 
+  "price": 900, 
+  "image_url": "jsfgosogj"
+}
+
+### PRODUCTS UPDATES
+
+PATCH http://localhost:3000/products/4.json
+Content-Type: application/json
+
+{
+  "name": "bike chain", 
+  "price": 25, 
+  "image_url": "insert later",
+  "description": "its a bike chain"
+}
+
+###
+
+DELETE http://localhost:3000/products/5.json
