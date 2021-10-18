@@ -4,19 +4,17 @@ Content-Type: application/json
 {
   "name": "electric scooter", 
   "price": 900, 
-  "image_url": "jsfgosogj"
+  "image_url": "jsfgosogj",
+  "description": ""
 }
 
 ### PRODUCTS UPDATES
 
-PATCH http://localhost:3000/products/4.json
+PATCH http://localhost:3000/products/6.json
 Content-Type: application/json
 
-{
-  "name": "bike chain", 
-  "price": 50, 
-  "image_url": "insert later",
-  "description": "its a bike chain"
+{ 
+  "image_url": "https://m.media-amazon.com/images/I/8185MMhNVYL._AC_SL1500_.jpg"
 }
 
 ###
