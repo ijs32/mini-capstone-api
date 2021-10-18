@@ -48,7 +48,7 @@ else
     end
   end
   update = HTTP.patch("http://localhost:3000/products/#{id}", :json => { :name => name, :price => price, image_url: image_url, descripton: description })
-
+  update
 end
 
 
