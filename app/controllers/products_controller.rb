@@ -15,10 +15,15 @@ class ProductsController < ApplicationController
       name: params["name"],
       price: params["price"],
       image_url: params["image_url"],
-      description: params["description"]
+      description: params["description"],
+      inventory: params["inventory"] || 0,
+      supplier_id: params["supplier_id"]
     )
-    product.save
-    render json: product
+    if product.save
+      render json: product
+    elsif
+      render json: {errors: product.errors.full_messages}, status: 406
+    end
   end
 
   def update
@@ -29,9 +34,14 @@ class ProductsController < ApplicationController
     product.price = params["price"] || product.price
     product.image_url = params["image_url"] || product.image_url
     product.description = params["description"] || product.description
+    product.inventory = params["inventory"] || product.inventory
+    product.supplier_id = params["supplier_id"] || product.supplier_id
 
-    product.save
-    render json: product
+    if product.save
+      render json: product
+    elsif
+      render json: {errors: product.errors.full_messages}, status: 406
+    end
   end 
 
   def destroy
