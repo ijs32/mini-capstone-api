@@ -1,5 +1,13 @@
 class Product < ApplicationRecord
+  belongs_to :supplier
   validates :price, numericality: true
+
+  def supplier
+    Supplier.find_by(id: supplier_id)
+  end
+  def urls
+    Image_url.where(product_id: id)
+  end
   def is_discounted
     price < 10
   end
@@ -9,4 +17,5 @@ class Product < ApplicationRecord
   def total
     price + tax
   end
+  
 end
