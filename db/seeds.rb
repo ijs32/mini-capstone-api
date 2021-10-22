@@ -1,3 +1,6 @@
+Supplier.create!([
+  {name: "BikeShop", email: "bikeshop@email.com", phone_number: "839-741-3812"},
+  {name: "ScootersRus", email: "scooters@Rus.com", phone_number: "143-984-2983"}])
 Product.create!([
   {name: "bike", price: "699.0", description: "its a bike", inventory: 4, supplier_id: 1},
   {name: "scooter", price: "99.0", description: "its a scooter", inventory: 5, supplier_id: 2},
@@ -5,11 +8,8 @@ Product.create!([
   {name: "electric scooter", price: "900.0", description: "its a scooter, with electricity.", inventory: 2, supplier_id: 2},
   {name: "bike chain", price: "50.0", description: "its a bike chain", inventory: 0, supplier_id: 1},
   {name: "bike tire", price: "59.0", description: "a bike tire", inventory: 12, supplier_id: 1},
-  {name: "Gas can", price: "24.99", image_url: nil, description: "can of gas", inventory: 0, supplier_id: 1}
+  {name: "Gas can", price: "24.99", description: "can of gas", inventory: 0, supplier_id: 1}
 ])
-Supplier.create!([
-  {name: "BikeShop", email: "bikeshop@email.com", phone_number: "839-741-3812"},
-  {name: "ScootersRus", email: "scooters@Rus.com"}])
 Image.create!([
   {url: "https://www.ghost-bikes.com/fileadmin/_processed_/8/c/csm_ghost-bikes-Riot-Trail-essential-black-black-45_38d9fe71b8.png", product_id: 1},
   {url: "https://cdn.shopify.com/s/files/1/0018/7616/4681/products/Dualtron-Storm-Electric-Scooter-Profile_1600x.jpg?v=1599679050", product_id: 2},

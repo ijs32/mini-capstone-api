@@ -17,6 +17,34 @@ Content-Type: application/json
   "price": "number"
 }
 
-###
+### delete
 
 DELETE http://localhost:3000/products/5.json
+
+### create user
+
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "test name",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### sessions create (login)
+
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+### login
+
+GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUwMTQyODl9.iHZH8madtaHCyZINhu1mDHli9Hn2hsEU3xIWg-vAQmU
+Content-Type: application/json

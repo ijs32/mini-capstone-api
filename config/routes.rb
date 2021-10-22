@@ -12,5 +12,13 @@ Rails.application.routes.draw do
   get "/suppliers/:id" => "suppliers#show"
   post "/suppliers" => "suppliers#create"
   patch "/suppliers/:id" => "suppliers#update"
+
+  ### users
+
+  post "/users" => "users#create" #create account
+
+  ### sessions
+
+  post "/sessions" => "sessions#create" #log-in as user
    
 end

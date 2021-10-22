@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :supplier
+  has_many :images
   validates :price, numericality: true
 
   def supplier
