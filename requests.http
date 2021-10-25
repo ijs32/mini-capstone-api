@@ -48,3 +48,20 @@ Content-Type: application/json
 GET http://localhost:3000/products.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUwMTQyODl9.iHZH8madtaHCyZINhu1mDHli9Hn2hsEU3xIWg-vAQmU
 Content-Type: application/json
+
+### order
+
+POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUyNjg5ODh9.iJcstdDlqWCA1be6RNu5latwZtN-Gjvj0QBYfHevzyA
+Content-Type: application/json
+
+{
+  "product_id": 1,
+  "quantity": 2
+}
+
+### ORDER INDEX
+
+GET http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUyNzM4OTF9.FQ7NfXk61mwj3J8v-WLsHJGM1OlYGPgsOiJi4lp7gG4
+Content-Type: application/json

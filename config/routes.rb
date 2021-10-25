@@ -20,5 +20,11 @@ Rails.application.routes.draw do
   ### sessions
 
   post "/sessions" => "sessions#create" #log-in as user
-   
+  
+  ### orders
+
+  get "/orders" => "orders#index"
+  get "/orders/:id" => "orders#show"
+  post "/orders" => "orders#create"
+  
 end
