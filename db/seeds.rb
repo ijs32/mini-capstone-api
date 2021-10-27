@@ -18,3 +18,12 @@ Image.create!([
   {url: "https://www.wigglestatic.com/product-media/103283250/KMC-E101-EPT-Single-Speed-E-Bike-Chain-Chains-Silver-BE101EP12.jpg?w=1200&h=1200&a=7", product_id: 5},
   {url: "https://m.media-amazon.com/images/I/8185MMhNVYL._AC_SL1500_.jpg", product_id: 6}
 ])
+Category.create!([
+  {name: "Bikes"},
+  {name: "Scooters"},
+  {name: "Bike parts"}
+])
+ProductCategory.create!([
+  {product_id: 1, category_id: 1},
+  {product_id: 1, category_id: 3}
+])
