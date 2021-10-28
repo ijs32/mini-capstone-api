@@ -1,6 +1,7 @@
 Supplier.create!([
   {name: "BikeShop", email: "bikeshop@email.com", phone_number: "839-741-3812"},
-  {name: "ScootersRus", email: "scooters@Rus.com", phone_number: "143-984-2983"}])
+  {name: "ScootersRus", email: "scooters@Rus.com", phone_number: "143-984-2983"}
+])
 Product.create!([
   {name: "bike", price: "699.0", description: "its a bike", inventory: 4, supplier_id: 1},
   {name: "scooter", price: "99.0", description: "its a scooter", inventory: 5, supplier_id: 2},
@@ -25,5 +26,19 @@ Category.create!([
 ])
 ProductCategory.create!([
   {product_id: 1, category_id: 1},
-  {product_id: 1, category_id: 3}
+  {product_id: 1, category_id: 3},
+  {product_id: 2, category_id: 2},
+  {product_id: 3, category_id: 3},
+  {product_id: 4, category_id: 2},
+  {product_id: 5, category_id: 3},
+  {product_id: 6, category_id: 3},
+  {product_id: 7, category_id: 3}
+])
+User.create!([
+  {name: "dude", email: "dude@test.com", password_digest: "$2a$12$qALz46A3xZ40yFo93XmxVepmzp3ImE5UqHrH63ihDzrud4NVu/DYC", admin: false},
+  {name: "ian", email: "ian@example.com", password_digest: "$2a$12$lTYCJmMga2yIBmysYztqSuiJ8p9cpbFOHfQ.19z3uoYoaB8SXuG.u", admin: false}
+])
+Order.create!([
+  {user_id: 1, product_id: 3, quantity: 2},
+  {user_id: 2, product_id: 5, quantity: 4}
 ])

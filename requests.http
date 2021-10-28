@@ -1,3 +1,6 @@
+GET http://localhost:3000/products.json?category=Bikes
+Content-Type: application/json
+###
 POST http://localhost:3000/products.json
 Content-Type: application/json
 
@@ -65,3 +68,20 @@ Content-Type: application/json
 GET http://localhost:3000/orders/1.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUyNzM4OTF9.FQ7NfXk61mwj3J8v-WLsHJGM1OlYGPgsOiJi4lp7gG4
 Content-Type: application/json
+
+### carted products create
+
+POST http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzU1MzI1NjB9.ubapuTIQ0stnji4bTZviuRlHHSdClzngBMixfPcZDgo
+Content-Type: application/json
+
+{
+  "product_id": 1,
+  "quantity": 1,
+  "status": "carted",
+  "order_id": 1
+}
+
+###
+
+GET http://localhost:3000/carted_products.json

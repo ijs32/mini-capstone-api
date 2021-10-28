@@ -8,8 +8,13 @@ class ProductsController < ApplicationController
   end
 
   def index
-    all = Product.all
-    render json: all
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      products = category.products
+    else
+      products = Product.all
+    end
+    render json: products
   end
 
   def create
@@ -22,7 +27,7 @@ class ProductsController < ApplicationController
     )
     if product.save
       render json: product
-    elsif
+    else
       render json: {errors: product.errors.full_messages}, status: 406
     end
   end
@@ -39,7 +44,7 @@ class ProductsController < ApplicationController
 
     if product.save
       render json: product
-    elsif
+    else
       render json: {errors: product.errors.full_messages}, status: 406
     end
   end 
